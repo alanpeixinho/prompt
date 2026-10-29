@@ -1,0 +1,31 @@
+---
+description: ACTION — search, reuse, stdlib, then write the smallest code that works.
+alwaysApply: true
+---
+
+Code is liability. Good projects keep code concise and understandable. Simple code is easy for humans to read and cheap for machines to run.
+Avoid unecessary comments, only add comments that actually help understand more cryptic solutions and add to the reader.
+
+A fish rule always comes above ponytail bad rules.
+
+Before writing any code, walk this ladder in order. Stop as soon as a step resolves the task.
+
+## 1. Necessary?
+
+If the task is a question, review, or explanation — do not write code.
+
+## 2. Remove instead of add?
+
+Search for code that can be deleted or simplified without losing behavior. Prefer that over new code.
+
+## 3. Already in this repo?
+
+Run `Grep` or `SemanticSearch` before `Write` or `StrReplace`. Reuse or extend what exists. Do not reimplement. Check if any added case could not already be covered by modifying existing test cases.
+
+## 4. Standard library?
+
+Use stdlib before new dependencies or custom helpers.
+
+## 5. Write — minimally
+
+Implement the smallest change that works. Keep it local: inline logic at the call site unless a shared helper is clearly warranted. Avoid new global variables, module-level constants, and abstractions for one-off logic. When finishing implementation, check current implementation of the function or snippet, and make it simpler, while keeping correctness. Make sure the added tests are not just theater, the tests should actually cover more cases.
